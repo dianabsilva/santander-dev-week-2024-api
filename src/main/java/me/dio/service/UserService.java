@@ -1,7 +1,12 @@
 package me.dio.service;
 
-import me.dio.domain.model.User;
+import me.dio.model.User;
 
-public interface UserService extends CrudService<Long, User> {
+import java.util.Optional;
 
+public interface UserService {
+
+    Optional<User> finbById(Long id);
+
+    User create(User userToCreate);
 }
